@@ -3,9 +3,9 @@ import { directors } from "../data";
 
 function Directors() {
   const mdirobjs = directors.map((director) => {
-    const moviesobjs = director.movies.map((movie) => <li>{movie}</li>)
+    const moviesobjs = director.movies.map((movie) => <li key={movie}>{movie}</li>)
     return (
-      <div>
+      <div key={director.name}>
         <h2>Name: {director.name}</h2>
         <ul>{moviesobjs}</ul>
       </div>

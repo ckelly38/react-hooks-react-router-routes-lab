@@ -3,9 +3,9 @@ import { actors } from "../data";
 
 function Actors() {
   const actorobjs = actors.map((actor) => {
-    const amviesobjs = actor.movies.map((mv) => <li>{mv}</li>);
+    const amviesobjs = actor.movies.map((mv) => <li key={mv}>{mv}</li>);
     return (
-      <div>
+      <div key={actor.name}>
         <h2>Name: {actor.name}</h2>
         <ul>
           {amviesobjs}
